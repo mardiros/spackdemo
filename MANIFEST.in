@@ -1,0 +1,2 @@
+include *.ini *.rst
+recursive-include spackdemo *.ico *.png *.css *.gif *.jpg *.pt *.txt *.mak *.mako *.js *.html *.xml

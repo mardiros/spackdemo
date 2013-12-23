@@ -1,0 +1,10 @@
+{% extends "templates/base.jinja2" %}
+
+{% block body %}
+
+{% if account.username %}
+    Welcome {{ account.username }}
+{% else %}
+    <a href="{{ request.route_path('create_account') }}">Create an account</a>
+{% endif %}
+{% endblock %}
