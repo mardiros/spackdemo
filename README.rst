@@ -21,7 +21,7 @@ Getting Started
 - firefox https://localhost/
 
 
-.. notes::
+.. note::
 
     Demo used self signed certificates available in the certs directory.
     It does not work on chromium (make certificate errors).
