@@ -34,7 +34,10 @@ def create_account(request):
                       Email=email
                       )
         serial = 1000  # XXX must be incremented
-        crt = spkac.gen_crt(pkey, cert, serial, hash_algo='sha512')
+        try:
+            crt = spkac.gen_crt(pkey, cert, serial, hash_algo='sha512')
+        except TypeError:
+            crt = spkac.gen_crt(pkey, cert, serial)
         response = Response(body=crt.as_pem(),
                             headers={'Accept-Ranges': 'bytes',
                                      'Content-Type': 'application/x-x509-user-cert'
